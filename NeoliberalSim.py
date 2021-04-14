@@ -95,21 +95,23 @@ while time < time_limit and resources > 1:
     time_list.append(time)
     time += 1
 
-
-#fig, ax1 = plt.subplots()
-
-#ax1.plot(time_list,extractiveness_list,exploitativeness_list)
-
-#ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-#
-#ax2.plot(time_list, resource_list, societal_resources)
-#fig.tight_layout()
-
-plt.plot(time_list,resource_list,societal_resources_list)
+plt.plot(time_list,resource_list,'g')
+plt.plot(time_list,societal_resources_list,'b')
+plt.xlabel('Time')
+plt.ylabel('Resources')
+plt.xticks([],[])
+plt.yticks([],[])
+plt.title('Resources over Time')
 plt.legend(['natural resources','societal resources'])
 plt.show()
 
-plt.plot(time_list,extractiveness_list,exploitativeness_list)
-#plt.plot(time_list,selflessness_list)
+plt.plot(time_list,extractiveness_list,'r')
+plt.plot(time_list,exploitativeness_list,'orange')
+plt.plot(time_list,selflessness_list,'g')
 plt.legend(['extractiveness','exploitation','selflessness'])
+plt.xlabel('Time')
+plt.ylabel('Traits')
+plt.title('Traits over Time')
+plt.xticks([],[])
+plt.yticks([],[])
 plt.show()
