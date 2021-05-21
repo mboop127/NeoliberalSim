@@ -21,6 +21,7 @@ time = 0 #starting time
 chance = 1
 magnitude = .001
 
+# used to simulate Darwinian evolution
 def mutate(list):
     for i in range(len(list)):
         if random.random() < chance:
@@ -58,6 +59,7 @@ societal_resources_list = []
 selflessness_list = []
 time_list = []
 
+#model
 while time < time_limit and resources > 1:
 
     capitalists = generate(parent)
@@ -95,6 +97,7 @@ while time < time_limit and resources > 1:
     time_list.append(time)
     time += 1
 
+#more graph stuff
 plt.plot(time_list,resource_list,'g')
 plt.plot(time_list,societal_resources_list,'b')
 plt.xlabel('Time')
